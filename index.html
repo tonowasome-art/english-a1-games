@@ -37,7 +37,51 @@
             </div>
         </div>
     </div>
-    
+
+    <!-- Vocabulary Match Game Modal -->
+    <div id="vocabGameModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="game-header">
+                <h2>Vocabulary Match Game</h2>
+                <button class="close-btn" onclick="closeVocabGame()">&times;</button>
+            </div>
+            
+            <div class="game-stats">
+                <div class="stat">
+                    <span class="stat-label">Score:</span>
+                    <span id="vocabScore" class="stat-value">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Correct:</span>
+                    <span id="vocabCorrect" class="stat-value">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Incorrect:</span>
+                    <span id="vocabIncorrect" class="stat-value">0</span>
+                </div>
+            </div>
+
+            <div id="vocabGameArea" class="game-area">
+                <div class="word-pairs-container">
+                    <div class="words-column">
+                        <h3>Words</h3>
+                        <div id="wordsContainer" class="items-container"></div>
+                    </div>
+                    <div class="meanings-column">
+                        <h3>Meanings</h3>
+                        <div id="meaningsContainer" class="items-container"></div>
+                    </div>
+                </div>
+                <div id="feedbackArea" class="feedback-area"></div>
+            </div>
+
+            <div class="game-actions">
+                <button onclick="restartVocabGame()" class="restart-btn">Restart Game</button>
+                <button onclick="closeVocabGame()" class="close-game-btn">Back to Menu</button>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
